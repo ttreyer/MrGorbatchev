@@ -18,7 +18,7 @@ public class ScoreKeeper : MonoBehaviour
     void Update()
     {
         //ForTesting
-        //AddToScore(1);
+        AddToScore(1);
     }
 
     //update the score and score display durring gameplay
