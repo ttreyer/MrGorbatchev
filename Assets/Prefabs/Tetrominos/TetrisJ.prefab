@@ -13,7 +13,10 @@ GameObject:
   - component: {fileID: 5720439849041494107}
   - component: {fileID: 8123239497061250318}
   - component: {fileID: 8132122962558408103}
-  - component: {fileID: 709998115591443958}
+  - component: {fileID: 602656026258319174}
+  - component: {fileID: 4537699613528408052}
+  - component: {fileID: 4904090460057366624}
+  - component: {fileID: 323396770661815009}
   m_Layer: 0
   m_Name: TetrisJ
   m_TagString: Untagged
@@ -393,8 +396,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &709998115591443958
-MeshCollider:
+--- !u!54 &602656026258319174
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6156677899422076185}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &4537699613528408052
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -403,7 +422,33 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 3, y: 1.0000002, z: 1}
+  m_Center: {x: 1.5, y: -0.5, z: 1.5}
+--- !u!65 &4904090460057366624
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6156677899422076185}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0000002, z: 1}
+  m_Center: {x: 0.5, y: -0.5, z: 0.5}
+--- !u!114 &323396770661815009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6156677899422076185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aadce907d5c7347aba9f8f9d902661ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fallInterval: 1
+  _fallSpeed: {x: 0, y: -1, z: 0}

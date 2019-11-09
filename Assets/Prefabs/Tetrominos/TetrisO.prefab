@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 580554253902939784}
   - component: {fileID: 3983110007376447199}
   - component: {fileID: 4490338621413534763}
-  - component: {fileID: 8295320736445291008}
-  m_Layer: 0
+  - component: {fileID: 3331319309609688148}
+  - component: {fileID: 6797623392643717524}
+  - component: {fileID: 8508309968630578338}
+  m_Layer: 12
   m_Name: TetrisO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,8 +319,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &8295320736445291008
-MeshCollider:
+--- !u!54 &3331319309609688148
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003705382450071437}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6797623392643717524
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -327,7 +345,20 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1, z: 2}
+  m_Center: {x: 1, y: -0.5, z: -1}
+--- !u!114 &8508309968630578338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003705382450071437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aadce907d5c7347aba9f8f9d902661ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fallInterval: 1
+  _fallSpeed: {x: 0, y: -1, z: 0}
