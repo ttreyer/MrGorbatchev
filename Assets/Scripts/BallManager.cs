@@ -6,19 +6,34 @@ public class BallManager : MonoBehaviour {
     public GameObject _ballPrefab;
     public LayerMask _ballLayer;
     public Transform _ballSpawn;
+    public GameObject _launcherCap;
 
+    private GameObject _ballToLaunch;
     private HashSet<GameObject> _balls = new HashSet<GameObject>();
 
-    private bool SpawnEmpty() {
-        return !Physics.CheckSphere(_ballSpawn.position, 1f, _ballLayer);
-    }
-
     public void SpawnBall() {
-        if (SpawnEmpty())
-            _balls.Add(Instantiate(_ballPrefab, _ballSpawn));
+        if (_ballToLaunch == null)
+            _ballToLaunch = Instantiate(_ballPrefab, _ballSpawn);
     }
 
     public void BallDied(GameObject ball) {
         _balls.Remove(ball);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (!other.CompareTag("Player"))
+            return;
+
+        _launcherCap.SetActive(false);
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (!other.CompareTag("Player"))
+            return;
+
+        _launcherCap.SetActive(true);
+
+        _balls.Add(_ballToLaunch);
+        _ballToLaunch = null;
     }
 }
