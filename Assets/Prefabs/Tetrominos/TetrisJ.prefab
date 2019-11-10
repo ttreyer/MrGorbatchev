@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4537699613528408052}
   - component: {fileID: 4904090460057366624}
   - component: {fileID: 323396770661815009}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TetrisJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -423,7 +423,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 1.0000002, z: 1}
+  m_Size: {x: 2.95, y: 1.0000002, z: 1}
   m_Center: {x: 1.5, y: -0.5, z: 1.5}
 --- !u!65 &4904090460057366624
 BoxCollider:
@@ -436,7 +436,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.0000002, z: 1}
+  m_Size: {x: 0.95, y: 1.0000002, z: 1}
   m_Center: {x: 0.5, y: -0.5, z: 0.5}
 --- !u!114 &323396770661815009
 MonoBehaviour:

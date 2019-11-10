@@ -1141,17 +1141,17 @@ PrefabInstance:
     - target: {fileID: 6143666766515404828, guid: c766ba725aa574dee8ea1442de9a8d90,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6143666766515404828, guid: c766ba725aa574dee8ea1442de9a8d90,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.06999993
+      value: -0.07000065
       objectReference: {fileID: 0}
     - target: {fileID: 6143666766515404828, guid: c766ba725aa574dee8ea1442de9a8d90,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.9000002
+      value: 6.900002
       objectReference: {fileID: 0}
     - target: {fileID: 6143666766515404828, guid: c766ba725aa574dee8ea1442de9a8d90,
         type: 3}
@@ -1322,6 +1322,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8450697791336988617, guid: c766ba725aa574dee8ea1442de9a8d90,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c766ba725aa574dee8ea1442de9a8d90, type: 3}
@@ -5403,7 +5408,7 @@ PrefabInstance:
     - target: {fileID: 8394181283663951025, guid: e7172d6d728314061be06dd185bee85e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8394181283663951025, guid: e7172d6d728314061be06dd185bee85e,
         type: 3}
@@ -5413,7 +5418,7 @@ PrefabInstance:
     - target: {fileID: 8394181283663951025, guid: e7172d6d728314061be06dd185bee85e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.900002
+      value: 5.9000006
       objectReference: {fileID: 0}
     - target: {fileID: 8394181283663951025, guid: e7172d6d728314061be06dd185bee85e,
         type: 3}
@@ -5659,6 +5664,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508309968630578338, guid: e7172d6d728314061be06dd185bee85e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3331319309609688148, guid: e7172d6d728314061be06dd185bee85e,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7172d6d728314061be06dd185bee85e, type: 3}
