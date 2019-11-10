@@ -1891,6 +1891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1956838857}
   - component: {fileID: 1956838858}
+  - component: {fileID: 1956838859}
   m_Layer: 12
   m_Name: TetrisSpawner
   m_TagString: Untagged
@@ -1934,6 +1935,19 @@ MonoBehaviour:
   - {fileID: 1632143444024002675, guid: fa036b44f29a64870b8ac35140b738a9, type: 3}
   _spawnInterval: 3.5
   _tetraminoIndex: 0
+--- !u!65 &1956838859
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956838856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1994400023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,50 +1984,12 @@ Transform:
   m_Father: {fileID: 1214863527}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2015883405
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2015883406}
-  - component: {fileID: 2015883407}
-  m_Layer: 12
-  m_Name: TetrisStopZone
-  m_TagString: TetrisStop
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2015883406
+--- !u!4 &2015883406 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2451572990849815329}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015883405}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1214863527}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2015883407
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015883405}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 16, y: 2, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2065511125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2142,6 +2118,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c27176d0e34e24844a9bc600d8e78cde, type: 3}
+--- !u!1001 &2451572990849815329
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1214863527}
+    m_Modifications:
+    - target: {fileID: 2451572989375570860, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_Name
+      value: TetrisStopZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2451572989375570863, guid: 679529a3a84e242558e816a62182215e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 679529a3a84e242558e816a62182215e, type: 3}
 --- !u!1001 &4528024582414460910
 PrefabInstance:
   m_ObjectHideFlags: 0

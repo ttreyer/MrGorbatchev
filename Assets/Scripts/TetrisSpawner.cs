@@ -9,10 +9,22 @@ public class TetrisSpawner : MonoBehaviour {
     public int _tetraminoIndex;
 
     private float _spawnTimer;
+    private BoxCollider _spawnBox;
+
+    private void Awake() {
+        _spawnBox = GetComponent<BoxCollider>();
+    }
 
     public void Spawn() {
         _spawnTimer = Time.time + _spawnInterval;
-        Instantiate(_tetraminos[_tetraminoIndex], transform);
+
+        float spawnMin = transform.position.x - (_spawnBox.size.x / 2f);
+        float spawnMax = transform.position.x + (_spawnBox.size.x / 2f) + 1f;
+        float spawnX = Mathf.Floor(Random.Range(spawnMin, spawnMax));
+
+        Vector3 spawnPos = new Vector3(spawnX, transform.position.y, transform.position.z);
+
+        Instantiate(_tetraminos[_tetraminoIndex], spawnPos, transform.rotation);
         _tetraminoIndex = (_tetraminoIndex + 1) % _tetraminos.Length;
     }
 
