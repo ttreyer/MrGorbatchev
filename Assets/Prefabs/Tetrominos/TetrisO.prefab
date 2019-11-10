@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 6797623392643717524}
   - component: {fileID: 8508309968630578338}
   - component: {fileID: 3140357992482206573}
+  - component: {fileID: 1998796024096322220}
   m_Layer: 12
   m_Name: TetrisO
   m_TagString: Untagged
@@ -140,7 +141,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.95, y: 2, z: 1}
+  m_Size: {x: 2, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8508309968630578338
 MonoBehaviour:
@@ -169,3 +170,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bounceDamping: 0.9
+--- !u!114 &1998796024096322220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003705382450071437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad4fef3fd90e4879866cd2648781460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _squishAmount: 0.05
