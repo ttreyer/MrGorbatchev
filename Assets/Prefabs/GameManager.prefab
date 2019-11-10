@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2523318274940666514}
   - component: {fileID: 2523318274940666513}
   - component: {fileID: 2523318274940666512}
+  - component: {fileID: 9139145846932202170}
   m_Layer: 0
-  m_Name: MusicManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,3 +153,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2313271ee9dd246f1970a4aa22569e71, type: 3}
   musicIsPlaying: 0
   currentClip: 0
+--- !u!114 &9139145846932202170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2523318274940666519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5176017ed5b64306a3048b402b5572a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
