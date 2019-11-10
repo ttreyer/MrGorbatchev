@@ -5,10 +5,12 @@ using UnityEngine;
 public class TetrisSpawner : MonoBehaviour {
     public GameObject[] _tetraminos;
     public float _spawnInterval = 3.5f;
+    public int _spawnDistanceFromLast = 2;
 
     private float _spawnTimer;
     private BoxCollider _spawnBox;
     private int _lastTetromino;
+    private int _lastPosition;
 
     private void Awake() {
         _spawnBox = GetComponent<BoxCollider>();
@@ -28,7 +30,12 @@ public class TetrisSpawner : MonoBehaviour {
         // Select random pos on X-axis, aligned on grid with the Floor()
         float spawnMin = transform.position.x - (_spawnBox.size.x / 2f);
         float spawnMax = transform.position.x + (_spawnBox.size.x / 2f) + 1f;
-        float spawnX = Mathf.Floor(Random.Range(spawnMin, spawnMax));
+
+        // Prevent the new position to be too close from the previous one
+        int spawnX = _lastPosition;
+        while (Mathf.Abs(spawnX - _lastPosition) <= _spawnDistanceFromLast)
+            spawnX = Mathf.FloorToInt(Random.Range(spawnMin, spawnMax));
+        _lastPosition = spawnX;
 
         return new Vector3(spawnX, transform.position.y, transform.position.z);
     }
