@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 4537699613528408052}
   - component: {fileID: 4904090460057366624}
   - component: {fileID: 323396770661815009}
+  - component: {fileID: 1196544659135458324}
   m_Layer: 12
   m_Name: TetrisJ
   m_TagString: Untagged
@@ -169,3 +170,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fallInterval: 1
   _fallSpeed: {x: 0, y: -1, z: 0}
+--- !u!114 &1196544659135458324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6156677899422076185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f655a5893bc431790cca3e03ac19f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

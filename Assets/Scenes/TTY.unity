@@ -973,7 +973,7 @@ PrefabInstance:
     - target: {fileID: 4609258359698744112, guid: 5ae9d24e3afe34c658667d279a4c172c,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 20.93
+      value: 21.580002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ae9d24e3afe34c658667d279a4c172c, type: 3}
@@ -3762,7 +3762,7 @@ PrefabInstance:
     - target: {fileID: 4609258359698744112, guid: 5ae9d24e3afe34c658667d279a4c172c,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 20.93
+      value: 21.580002
       objectReference: {fileID: 0}
     - target: {fileID: 4609258359698744112, guid: 5ae9d24e3afe34c658667d279a4c172c,
         type: 3}

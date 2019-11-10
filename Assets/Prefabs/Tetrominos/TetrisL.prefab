@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 4508666566863591916}
   - component: {fileID: 8265166808516407219}
   - component: {fileID: 1583362674659557079}
+  - component: {fileID: 8360156176157229943}
   m_Layer: 12
   m_Name: TetrisL
   m_TagString: Untagged
@@ -169,3 +170,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fallInterval: 1
   _fallSpeed: {x: 0, y: -1, z: 0}
+--- !u!114 &8360156176157229943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8853866124239701864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f655a5893bc431790cca3e03ac19f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
