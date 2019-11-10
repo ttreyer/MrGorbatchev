@@ -15,7 +15,6 @@ public class NewsReel : MonoBehaviour
     private float totalAdvanced = 0f;
 
     [SerializeField] private bool scrollright = false;
-    [SerializeField] private bool flash = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,30 +22,23 @@ public class NewsReel : MonoBehaviour
         textRextTransform = newsText.GetComponent<RectTransform>();
         news = null;
 
-        UpdateNews("Hello World.", true);
+        UpdateNews("Hello World.", true,0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (scrollright && !flash)
+        if (scrollright)
         {
             if (totalAdvanced == 0f)
            {
                 StartCoroutine("ScrollFromRight");
            }
         }
-        else if (scrollright && flash)
-        {
-            if (totalAdvanced == 0f)
-            {
-                StartCoroutine("ScrollFromRightThenFlash");
-            }
-        }
     }
 
     //update the score and score display durring gameplay
-    public void UpdateNews(string newHeadline, bool scroll)
+    public void UpdateNews(string newHeadline, bool scroll, int musicIndex)
     {
         scrollright = scroll;
         news = newHeadline;
@@ -54,19 +46,18 @@ public class NewsReel : MonoBehaviour
 
         if(scroll)
         {
-            textStartPosition = new Vector2(textRextTransform.anchoredPosition.x, -93.8f);
-
-            Debug.Log("Text Start Position is" + textStartPosition.x);
+            textStartPosition = new Vector2(textRextTransform.anchoredPosition.x, 0f);
         }
         else
         {
-            textStartPosition = new Vector2(textRextTransform.anchoredPosition.x,
-                                            textRextTransform.anchoredPosition.y);
+            textStartPosition = new Vector2(84.67f, 0f);
         }
 
+        MusicManager.instance.PlayMusic(musicIndex);
+        textRextTransform.anchoredPosition = textStartPosition;
     }
 
-    public void UpdateNews(int headlineIndex, bool scroll)
+    public void UpdateNews(int headlineIndex, bool scroll, int musicIndex)
     {
         scrollright = scroll;
         news = headlines[headlineIndex];
@@ -74,16 +65,15 @@ public class NewsReel : MonoBehaviour
 
         if (scroll)
         {
-            textStartPosition = new Vector2(textRextTransform.anchoredPosition.x, -93.8f);
+            textStartPosition = new Vector2(textRextTransform.anchoredPosition.x, 0f);
 
-            Debug.Log("Text Start Position is" + textStartPosition.x);
         }
         else
         {
-            textStartPosition = new Vector2(textRextTransform.anchoredPosition.x,
-                                            textRextTransform.anchoredPosition.y);
+            textRextTransform.anchoredPosition = new Vector2(0f, 0f);
         }
 
+        MusicManager.instance.PlayMusic(musicIndex);
     }
 
     private IEnumerator ScrollFromRight()
@@ -97,38 +87,11 @@ public class NewsReel : MonoBehaviour
         while (totalAdvanced <= (textLength+startPos))
         {
             yield return new WaitForSecondsRealtime(.1f);
-            //advance text field by advanceBy in the X
+            
             textRextTransform.anchoredPosition = new Vector3 (textStartPosition.x -totalAdvanced,
                                                                 textStartPosition.y
                                                                 );
             totalAdvanced += advanceBy;
-
-            Debug.Log("total advanced is " + totalAdvanced);
-        }
-
-        totalAdvanced = 0;
-        yield break;
-    }
-
-
-    private IEnumerator ScrollFromRightThenFlash()
-    {
-        totalAdvanced = 1;
-        float advanceBy = 5f;
-        float textLength = TextLength();
-
-        textRextTransform.anchoredPosition = textStartPosition;
-
-        while (totalAdvanced <= (textLength))
-        {
-            yield return new WaitForSecondsRealtime(.1f);
-            //advance text field by advanceBy in the X
-            textRextTransform.anchoredPosition = new Vector3(textStartPosition.x - totalAdvanced,
-                                                                textStartPosition.y
-                                                                );
-            totalAdvanced += advanceBy;
-
-            Debug.Log("total advanced is " + totalAdvanced);
         }
 
         totalAdvanced = 0;
@@ -139,7 +102,6 @@ public class NewsReel : MonoBehaviour
     {
         int stringLength = news.Length;
         float textLengthInPx = stringLength * charLengthInPx;
-        Debug.Log("Text length in Px is " + textLengthInPx);
 
         return textLengthInPx;
     }

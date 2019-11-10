@@ -45,7 +45,7 @@ public class ScoreKeeper : MonoBehaviour
     {
         if (score >= 1000000f)
         {
-            newsReel.UpdateNews("Over 1 million! WOW!", true);
+            newsReel.UpdateNews("Over 1 million! WOW!", false, 0);
             return true;
         }
         else
@@ -58,7 +58,7 @@ public class ScoreKeeper : MonoBehaviour
     {
         if (score >= 100000f)
         {
-            newsReel.UpdateNews("You are pretty good at this.", true);
+            newsReel.UpdateNews("You are pretty good at this.", true, 0);
             return true;
         }
         else

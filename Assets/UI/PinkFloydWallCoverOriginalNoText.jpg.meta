@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: f4ba9bd12fb6542df9698bc4589a1140
+guid: bd887346bedbc4dc3ab0183bc14586f4
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 4189946215843554430
-    second: scrollingtextmask_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -43,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -111,28 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: scrollingtextmask_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 878
-        width: 1920
-        height: 202
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 676, y: 81, z: 678, w: 54}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b303749066ab4093a5b844ba74db441
-      internalID: 4189946215843554430
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
