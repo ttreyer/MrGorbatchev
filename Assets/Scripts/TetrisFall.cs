@@ -16,7 +16,14 @@ public class TetrisFall : MonoBehaviour {
 
     private void Fall() {
         NewFallTime();
-        _rbody.position += _fallSpeed;
+
+        // Keep the positions rounded
+        Vector3 newPosition = _rbody.position + _fallSpeed;
+        newPosition.x = Mathf.Round(newPosition.x);
+        newPosition.y = Mathf.Round(newPosition.y);
+        newPosition.z = Mathf.Round(newPosition.z);
+
+        _rbody.position = newPosition;
     }
 
     private void Freeze() {
