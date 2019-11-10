@@ -20,6 +20,11 @@ public class BallManager : MonoBehaviour {
         _balls.Remove(ball);
     }
 
+    public void Launch(float launchForce) {
+        if (_ballToLaunch != null)
+            _ballToLaunch.GetComponent<BallLauncher>().Launch(launchForce);
+    }
+
     private void OnTriggerEnter(Collider other) {
         if (!other.CompareTag("Player"))
             return;

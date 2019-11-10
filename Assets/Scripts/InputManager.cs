@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour {
     public FlipperRotator _leftFlipper, _rightFlipper;
-    public BallLauncher _ball;
     public TetrisSpawner _tetrisSpawner;
     public BallManager _ballManager;
 
@@ -12,7 +11,7 @@ public class InputManager : MonoBehaviour {
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Space))
-            _ball.Launch(_ballLaunchForce);
+            _ballManager.Launch(_ballLaunchForce);
         if (Input.GetKeyDown(KeyCode.Return))
             _tetrisSpawner.Spawn();
         if (Input.GetKeyDown(KeyCode.Tab))

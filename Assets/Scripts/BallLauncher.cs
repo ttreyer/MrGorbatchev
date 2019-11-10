@@ -11,7 +11,7 @@ public class BallLauncher : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        _rbody.AddForce(transform.parent.forward * _force);
+        _rbody.AddForce(transform.parent.up * _force);
         _force = 0f;
     }
 
