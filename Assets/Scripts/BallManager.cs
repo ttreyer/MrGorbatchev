@@ -7,7 +7,7 @@ public class BallManager : MonoBehaviour {
     public LayerMask _ballLayer;
     public Transform _ballSpawn;
 
-    private HashSet<GameObject> _balls;
+    private HashSet<GameObject> _balls = new HashSet<GameObject>();
 
     private bool SpawnEmpty() {
         return !Physics.CheckSphere(_ballSpawn.position, 1f, _ballLayer);
@@ -16,5 +16,9 @@ public class BallManager : MonoBehaviour {
     public void SpawnBall() {
         if (SpawnEmpty())
             _balls.Add(Instantiate(_ballPrefab, _ballSpawn));
+    }
+
+    public void BallDied(GameObject ball) {
+        _balls.Remove(ball);
     }
 }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - TetrisStop
+  - Death
+  - BallManager
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Flipper
   - Bumper
   - Tetris
-  - 
+  - Death
   - 
   - 
   - 

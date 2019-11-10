@@ -6,6 +6,7 @@ public class InputManager : MonoBehaviour {
     public FlipperRotator _leftFlipper, _rightFlipper;
     public BallLauncher _ball;
     public TetrisSpawner _tetrisSpawner;
+    public BallManager _ballManager;
 
     public float _ballLaunchForce = 2500f;
 
@@ -14,6 +15,8 @@ public class InputManager : MonoBehaviour {
             _ball.Launch(_ballLaunchForce);
         if (Input.GetKeyDown(KeyCode.Return))
             _tetrisSpawner.Spawn();
+        if (Input.GetKeyDown(KeyCode.Tab))
+            _ballManager.SpawnBall();
 
         _leftFlipper.FlipToggle(Input.GetKey(KeyCode.LeftArrow));
         _rightFlipper.FlipToggle(Input.GetKey(KeyCode.RightArrow));
