@@ -46,4 +46,9 @@ public class TetrisFall : MonoBehaviour {
     private void OnCollisionEnter(Collision collision) {
         _mustFreeze = true;
     }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("TetrisStop"))
+            _mustFreeze = true;
+    }
 }

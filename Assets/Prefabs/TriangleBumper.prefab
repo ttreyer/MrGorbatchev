@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4528024583146257297}
-  m_Layer: 0
-  m_Name: TriangleBumper 1
+  m_Layer: 11
+  m_Name: TriangleBumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4528024583285458492}
   - component: {fileID: 4528024583285458493}
   - component: {fileID: 4528024583285458490}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Bumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 4528024584179866885}
   - component: {fileID: 4528024584179866884}
   - component: {fileID: 4528024584179866882}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
