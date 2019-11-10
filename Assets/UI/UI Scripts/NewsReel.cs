@@ -46,7 +46,7 @@ public class NewsReel : MonoBehaviour
 
         if(scroll)
         {
-            textStartPosition = new Vector2(textRextTransform.anchoredPosition.x, 0f);
+            textStartPosition = textRextTransform.anchoredPosition;
         }
         else
         {
@@ -65,7 +65,7 @@ public class NewsReel : MonoBehaviour
 
         if (scroll)
         {
-            textStartPosition = new Vector2(textRextTransform.anchoredPosition.x, 0f);
+            textStartPosition = textRextTransform.anchoredPosition;
 
         }
         else
