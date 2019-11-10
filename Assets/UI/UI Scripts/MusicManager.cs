@@ -11,7 +11,7 @@ public class MusicManager : MonoBehaviour
     private AudioSource myAudioSource;
     [SerializeField] private bool musicIsPlaying = false;
 
-    [SerializeField] private int currentClip;
+    [SerializeField] private int currentClip =0;
 
 
     private void Awake()
@@ -27,17 +27,17 @@ public class MusicManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+
+        myAudioSource = gameObject.GetComponent<AudioSource>();
     }
     
     void Start()
     {
-        myAudioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     //plays a sound effect at specified vector3 location

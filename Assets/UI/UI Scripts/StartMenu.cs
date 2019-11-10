@@ -7,7 +7,7 @@ public class StartMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Debug.Log("Trying to start music");
+        Debug.Log("Trying to start music in the Start Menu");
         MusicManager.instance.PlayMusic(0);
     }
 
