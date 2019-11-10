@@ -770,6 +770,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightFlipper
       objectReference: {fileID: 0}
+    - target: {fileID: 4609258359698744113, guid: 5ae9d24e3afe34c658667d279a4c172c,
+        type: 3}
+      propertyPath: _flipSpeed
+      value: 1200
+      objectReference: {fileID: 0}
     - target: {fileID: 4609258359698744123, guid: 5ae9d24e3afe34c658667d279a4c172c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -839,6 +844,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 21.650002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609258359698744112, guid: 5ae9d24e3afe34c658667d279a4c172c,
+        type: 3}
+      propertyPath: m_Motor.force
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 1724671558247532418, guid: 5ae9d24e3afe34c658667d279a4c172c,
         type: 3}
@@ -996,7 +1006,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _leftFlipper: {fileID: 708056745}
   _rightFlipper: {fileID: 170493585}
-  _ball: {fileID: 0}
   _tetrisSpawner: {fileID: 1956838858}
   _ballManager: {fileID: 498144371}
   _ballLaunchForce: 2500
@@ -2240,7 +2249,7 @@ PrefabInstance:
     - target: {fileID: 4609258359698744113, guid: 5ae9d24e3afe34c658667d279a4c172c,
         type: 3}
       propertyPath: _flipSpeed
-      value: -1000
+      value: -1200
       objectReference: {fileID: 0}
     - target: {fileID: 4609258359698744123, guid: 5ae9d24e3afe34c658667d279a4c172c,
         type: 3}
@@ -2291,6 +2300,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 21.650002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4609258359698744112, guid: 5ae9d24e3afe34c658667d279a4c172c,
+        type: 3}
+      propertyPath: m_Motor.force
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 1724671558247532418, guid: 5ae9d24e3afe34c658667d279a4c172c,
         type: 3}
