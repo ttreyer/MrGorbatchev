@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 623b4a3b616d347e1b438e04f4a63694
+guid: b27ba78f0d2ba4482bae1c890f5492f5
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Dealerplate
+  fontName: ROCK-ON Demo
   fontNames:
-  - Dealerplate
+  - ROCK-ON Demo
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
