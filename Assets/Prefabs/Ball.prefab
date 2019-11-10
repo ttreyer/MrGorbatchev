@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1658469391829727321}
   - component: {fileID: 1658469391829727322}
   - component: {fileID: 7032000608468647924}
+  - component: {fileID: 8893760988806333342}
   m_Layer: 9
   m_Name: Ball
   m_TagString: Player
@@ -150,3 +151,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deathAnim: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
+--- !u!114 &8893760988806333342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658469391829727315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82fc279032fd74308866e62a1bd57525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxSpeed: 50
