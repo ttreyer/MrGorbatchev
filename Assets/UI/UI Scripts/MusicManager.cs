@@ -40,6 +40,7 @@ public class MusicManager : MonoBehaviour
         
     }
 
+    //plays a sound effect at specified vector3 location
     public void SpawnSoundEffect(Vector3 location, int clipIndex)
     {
         //check if the clip can exist in the array
@@ -51,6 +52,20 @@ public class MusicManager : MonoBehaviour
 
         AudioClip clip = soundEffects[clipIndex];
         AudioSource.PlayClipAtPoint(clip, location);
+    }
+
+    //plays a sound effect from the camera
+    public void SpawnSoundEffect(int clipIndex)
+    {
+        //check if the clip can exist in the array
+        if (clipIndex > soundEffects.Length)
+        {
+            Debug.Log("Clip " + clipIndex + " does not exist in the soundEffects Array.");
+            return;
+        }
+
+        AudioClip clip = soundEffects[clipIndex];
+        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position);
     }
 
     public void PlayMusic(int clipIndex)
