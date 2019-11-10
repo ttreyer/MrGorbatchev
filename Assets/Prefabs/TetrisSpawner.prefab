@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2957115497336212564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2957115497336212565}
+  - component: {fileID: 2957115497336212566}
+  - component: {fileID: 2957115497336212567}
+  m_Layer: 12
+  m_Name: TetrisSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2957115497336212565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957115497336212564}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &2957115497336212566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957115497336212564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bac4929eeeca48d88556b0dea874db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tetraminos:
+  - {fileID: 4176658720966542221, guid: 24c80488bea5d4814bcc9d34c3d8e7bd, type: 3}
+  - {fileID: 6156677899422076185, guid: a1854d2dbad7b43efac07ae670e0ef32, type: 3}
+  - {fileID: 8853866124239701864, guid: c766ba725aa574dee8ea1442de9a8d90, type: 3}
+  - {fileID: 3003705382450071437, guid: e7172d6d728314061be06dd185bee85e, type: 3}
+  - {fileID: 6787621719037731323, guid: 674614384129648f8ba6e6a728ef8b0b, type: 3}
+  - {fileID: 535722579101088098, guid: 560db91f06271440eb0ead590cf9bfac, type: 3}
+  - {fileID: 1632143444024002675, guid: fa036b44f29a64870b8ac35140b738a9, type: 3}
+  _spawnInterval: 3.5
+--- !u!65 &2957115497336212567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2957115497336212564}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
