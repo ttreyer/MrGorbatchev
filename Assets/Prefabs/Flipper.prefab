@@ -32,7 +32,8 @@ Transform:
   m_LocalRotation: {x: 0.37992823, y: 0.59636784, z: -0.59636784, w: 0.3799282}
   m_LocalPosition: {x: -2.8784347, y: 0, z: -9.186}
   m_LocalScale: {x: 100, y: 300, z: 100}
-  m_Children: []
+  m_Children:
+  - {fileID: 1724671558247532418}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90.00001, y: 25, z: -90.00001}
@@ -123,7 +124,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 2.249, y: -7.9310007, z: 21.650002}
+  m_ConnectedAnchor: {x: -2.8784347, y: 0, z: -9.186}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -160,3 +161,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _flipSpeed: 1000
+--- !u!1 &6075890841475717046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1724671558247532418}
+  - component: {fileID: 3406469628993658476}
+  m_Layer: 10
+  m_Name: BonusFlip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1724671558247532418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6075890841475717046}
+  m_LocalRotation: {x: 0, y: 0, z: -0.032282885, w: 0.99947876}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.0033333334, z: 0.01}
+  m_Children: []
+  m_Father: {fileID: 4609258359698744123}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.7}
+--- !u!65 &3406469628993658476
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6075890841475717046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46482393, y: 0.9880192, z: 0.84629303}
+  m_Center: {x: -0.07500468, y: 2.2893307, z: -0.67299193}
