@@ -16,6 +16,11 @@ public class NewsReel : MonoBehaviour
 
     [SerializeField] private bool scrollright = false;
 
+    private void PlayMusic(int musicIndex) {
+        if (MusicManager.instance)
+            MusicManager.instance.PlayMusic(musicIndex);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +58,7 @@ public class NewsReel : MonoBehaviour
             textStartPosition = new Vector2(84.67f, 0f);
         }
 
-        MusicManager.instance.PlayMusic(musicIndex);
+        PlayMusic(musicIndex);
         textRextTransform.anchoredPosition = textStartPosition;
     }
 
@@ -73,7 +78,7 @@ public class NewsReel : MonoBehaviour
             textRextTransform.anchoredPosition = new Vector2(0f, 0f);
         }
 
-        MusicManager.instance.PlayMusic(musicIndex);
+        PlayMusic(musicIndex);
     }
 
     private IEnumerator ScrollFromRight()
