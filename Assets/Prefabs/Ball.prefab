@@ -135,4 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0607a80a3875a46b3ad9c73caacd5a2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravityMultiplier: 2
+  _gravityMultiplier: 3
