@@ -27,7 +27,7 @@ public class NewsReel : MonoBehaviour
         textRextTransform = newsText.GetComponent<RectTransform>();
         news = null;
 
-        UpdateNews("\"The Wall will be standing in 50 and even in 100 years\" - Erich Honecker, January 19th, 1989", true,0);
+        UpdateNews("\"The Wall will be standing in 50 and even in 100 years\" - Erich Honecker, January 19th, 1989", true,1);
     }
 
     // Update is called once per frame
