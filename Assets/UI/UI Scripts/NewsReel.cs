@@ -6,8 +6,14 @@ using UnityEngine.UI;
 public class NewsReel : MonoBehaviour
 {
     public string[] headlines;
+    public string[] newsArticle;
+    public string[] quote;
+    [SerializeField] private Text headlineText;
     [SerializeField] private Text newsText;
-    [SerializeField] private string news;
+    [SerializeField] private Text quoteText;
+    [SerializeField] private string currentHeadline;
+
+    private int fieldLimit = 12; //number of characters that fit in the stationary headline
     RectTransform textRextTransform;
     private float charLengthInPx = 43f;
     private float startPos = 660f;
@@ -16,18 +22,13 @@ public class NewsReel : MonoBehaviour
 
     [SerializeField] private bool scrollright = false;
 
-    private void PlayMusic(int musicIndex) {
-        if (MusicManager.instance)
-            MusicManager.instance.PlayMusic(musicIndex);
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        textRextTransform = newsText.GetComponent<RectTransform>();
-        news = null;
+        textRextTransform = headlineText.GetComponent<RectTransform>();
+        currentHeadline = null;
 
-        UpdateNews("\"The Wall will be standing in 50 and even in 100 years\" - Erich Honecker, January 19th, 1989", true,1);
+        UpdateHeadline(0);
     }
 
     // Update is called once per frame
@@ -42,33 +43,22 @@ public class NewsReel : MonoBehaviour
         }
     }
 
-    //update the score and score display durring gameplay
-    public void UpdateNews(string newHeadline, bool scroll, int musicIndex)
+    public void UpdateNewsContents(int phase)
     {
-        scrollright = scroll;
-        news = newHeadline;
-        newsText.text = news;
-
-        if(scroll)
-        {
-            textStartPosition = textRextTransform.anchoredPosition;
-        }
-        else
-        {
-            textStartPosition = new Vector2(84.67f, 0f);
-        }
-
-        PlayMusic(musicIndex);
-        textRextTransform.anchoredPosition = textStartPosition;
+        //Update headline and scroll if long enough
+        UpdateHeadline(phase-1);
+        //Update news
+        //update quote and scroll if long enough
     }
+    
 
-    public void UpdateNews(int headlineIndex, bool scroll, int musicIndex)
+    private void UpdateHeadline(int headlineIndex)
     {
-        scrollright = scroll;
-        news = headlines[headlineIndex];
-        newsText.text = news;
+        currentHeadline = headlines[headlineIndex];
+        headlineText.text = currentHeadline;
+        scrollright = (currentHeadline.Length > fieldLimit);
 
-        if (scroll)
+        if (scrollright)
         {
             textStartPosition = textRextTransform.anchoredPosition;
 
@@ -78,7 +68,6 @@ public class NewsReel : MonoBehaviour
             textRextTransform.anchoredPosition = new Vector2(0f, 0f);
         }
 
-        PlayMusic(musicIndex);
     }
 
     private IEnumerator ScrollFromRight()
@@ -105,7 +94,7 @@ public class NewsReel : MonoBehaviour
 
     private float TextLength()
     {
-        int stringLength = news.Length;
+        int stringLength = currentHeadline.Length;
         float textLengthInPx = stringLength * charLengthInPx;
 
         return textLengthInPx;

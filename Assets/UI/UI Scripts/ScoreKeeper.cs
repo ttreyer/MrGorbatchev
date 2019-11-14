@@ -9,7 +9,7 @@ public class ScoreKeeper : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private int score;
 
-    private NewsReel newsReel;
+    private PhaseTracker myPhaseTracker;
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class ScoreKeeper : MonoBehaviour
     void Start()
     {
         score = 0;
-        newsReel = gameObject.GetComponent<NewsReel>();
+        myPhaseTracker = gameObject.GetComponent<PhaseTracker>();
     }
 
     void Update()
@@ -35,8 +35,8 @@ public class ScoreKeeper : MonoBehaviour
     //ForTesting
         //AddToScore(1);
 
-        if(ScoreGreaterThan1mil()) return;
-        else if (ScoreGreaterThan100thou()) return;
+        if(ScoreGreaterThan2mil()) return;
+        else if (ScoreGreaterThan1mil()) return;
     }
 
     //update the score and score display durring gameplay
@@ -57,9 +57,8 @@ public class ScoreKeeper : MonoBehaviour
     {
         if (score >= 1000000)
         {
-            newsReel.UpdateNews("Over 1 million! WOW!", false, 0);
-            //does other stuff
-
+            //update the phase
+            myPhaseTracker.currentPhase = 1;
             return true;
         }
         else
@@ -68,11 +67,12 @@ public class ScoreKeeper : MonoBehaviour
         }
     }
 
-    private bool ScoreGreaterThan100thou()
+    private bool ScoreGreaterThan2mil()
     {
-        if (score >= 100000)
+        if (score >= 2000000)
         {
-            newsReel.UpdateNews("You are pretty good at this.", true, 0);
+            //update the phase
+            myPhaseTracker.currentPhase = 2;
             return true;
         }
         else
