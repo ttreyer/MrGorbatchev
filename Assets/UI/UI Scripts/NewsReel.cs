@@ -7,7 +7,7 @@ public class NewsReel : MonoBehaviour
 {
     public string[] headlines;
     public string[] newsArticle;
-    public string[] quote;
+    public string[] quotes;
     [SerializeField] private Text headlineText;
     [SerializeField] private Text newsText;
     [SerializeField] private Text quoteText;
@@ -28,7 +28,8 @@ public class NewsReel : MonoBehaviour
         textRextTransform = headlineText.GetComponent<RectTransform>();
         currentHeadline = null;
 
-        UpdateHeadline(0);
+        //for testing
+        UpdateNewsContents(1);
     }
 
     // Update is called once per frame
@@ -48,7 +49,9 @@ public class NewsReel : MonoBehaviour
         //Update headline and scroll if long enough
         UpdateHeadline(phase-1);
         //Update news
+        UpdateNews(phase-1);
         //update quote and scroll if long enough
+        UpdateQuote(phase-1);
     }
     
 
@@ -68,6 +71,17 @@ public class NewsReel : MonoBehaviour
             textRextTransform.anchoredPosition = new Vector2(0f, 0f);
         }
 
+    }
+
+    private void UpdateNews(int newsIndex)
+    {
+        newsText.text = newsArticle[newsIndex];
+    }
+
+    
+    private void UpdateQuote(int quoteIndex)
+    {
+        quoteText.text = quotes[quoteIndex];
     }
 
     private IEnumerator ScrollFromRight()

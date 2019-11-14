@@ -27,12 +27,16 @@ public class PhaseTracker : MonoBehaviour
                 Phase1();
                 break;
             case 2:
+                Phase2();
                 break;
             case 3:
+                Phase3();
                 break;
             case 4:
+                Phase4();
                 break;
             default:
+                Phase1();
                 break;
         }
     }
@@ -43,7 +47,7 @@ public class PhaseTracker : MonoBehaviour
         PlayMusic(1);
 
         //set background color
-        bGUIcolorTint.color = Color.red;
+        bGUIcolorTint.color = new Color(0f, 0f, 0f, 0.4f); //translucent black
         //alternately, change the image
         // bGUIcolorTint.sprite = /*whateversprite*/;
 
@@ -51,7 +55,51 @@ public class PhaseTracker : MonoBehaviour
         newsReel.UpdateNewsContents(currentPhase);
     }
 
-private void PlayMusic(int musicIndex)
+    private void Phase2()
+    {
+        //start music
+        PlayMusic(2);
+
+        //set background color
+        bGUIcolorTint.color = new Color(1f, 0f, 0f, 0.4f); //translucent red
+        //alternately, change the image
+        // bGUIcolorTint.sprite = /*whateversprite*/;
+
+        //update news
+        newsReel.UpdateNewsContents(currentPhase);
+    }
+
+
+    private void Phase3()
+    {
+        //start music
+        PlayMusic(3);
+
+        //set background color
+        bGUIcolorTint.color = new Color(.8f,0f,1f,0.4f);  //translucent purple
+        //alternately, change the image
+        // bGUIcolorTint.sprite = /*whateversprite*/;
+
+        //update news
+        newsReel.UpdateNewsContents(currentPhase);
+    }
+
+
+    private void Phase4()
+    {
+        //start music
+        PlayMusic(4);
+
+        //set background color
+        bGUIcolorTint.color = new Color(0f, 0f, 1f, 0.4f); //translucent blue
+        //alternately, change the image
+        // bGUIcolorTint.sprite = /*whateversprite*/;
+
+        //update news
+        newsReel.UpdateNewsContents(currentPhase);
+    }
+
+    private void PlayMusic(int musicIndex)
     {
         if (MusicManager.instance)
             MusicManager.instance.PlayMusic(musicIndex);

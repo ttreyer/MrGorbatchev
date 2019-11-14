@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3682444436878006823}
   - component: {fileID: 8435442101228005039}
   - component: {fileID: 662231395979915217}
-  - component: {fileID: 6679199051435866497}
   m_Layer: 5
   m_Name: News Text
   m_TagString: Untagged
@@ -34,9 +33,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 605, y: 0}
-  m_SizeDelta: {x: 0, y: 93.8}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 11.5, y: 14.5}
+  m_SizeDelta: {x: -23.299988, y: -28.5}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &8435442101228005039
 CanvasRenderer:
@@ -60,38 +59,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: f530d1450d965462e929574b6f5b283c, type: 3}
-    m_FontSize: 61
+    m_FontSize: 45
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 6
-    m_MaxSize: 232
-    m_Alignment: 3
-    m_AlignByGeometry: 1
+    m_BestFit: 1
+    m_MinSize: 20
+    m_MaxSize: 62
+    m_Alignment: 0
+    m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
---- !u!114 &6679199051435866497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824575921027458750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 2
-  m_VerticalFit: 0
 --- !u!1 &1385001112989791209
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,11 +213,21 @@ MonoBehaviour:
   - 
   - 
   - 
-  newsArticle: []
-  quote: []
-  headlineText: {fileID: 0}
-  newsText: {fileID: 4405205356525779445}
-  quoteText: {fileID: 0}
+  newsArticle:
+  - '"\"The Wall will be standing in 50 and even in 100 years\" - Erich Honecker,
+    January 19th, 1989"'
+  - 
+  - 
+  - 
+  quotes:
+  - '"\"The Wall will be standing in 50 and even in 100 years\" - Erich Honecker,
+    January 19th, 1989"'
+  - 
+  - 
+  - 
+  headlineText: {fileID: 4405205356525779445}
+  newsText: {fileID: 662231395979915217}
+  quoteText: {fileID: 7295006921377243470}
   currentHeadline: 
   scrollright: 0
 --- !u!114 &-7581686213101937572
@@ -282,9 +277,9 @@ RectTransform:
   m_Father: {fileID: 7256493016882464354}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 605, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 605, y: -93.8}
   m_SizeDelta: {x: 0, y: 93.8}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &2573066898130190063
@@ -309,7 +304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -517,7 +512,6 @@ GameObject:
   - component: {fileID: 3107173603535463720}
   - component: {fileID: 8940683861693608309}
   - component: {fileID: 7295006921377243470}
-  - component: {fileID: 1675911229058963686}
   m_Layer: 5
   m_Name: Quote Text
   m_TagString: Untagged
@@ -540,9 +534,9 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 605, y: 0}
-  m_SizeDelta: {x: 0, y: 93.8}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 13.6, y: 13.6}
+  m_SizeDelta: {x: -27.2, y: -27.2}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &8940683861693608309
 CanvasRenderer:
@@ -566,38 +560,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: f530d1450d965462e929574b6f5b283c, type: 3}
-    m_FontSize: 61
+    m_FontSize: 45
     m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 6
-    m_MaxSize: 232
-    m_Alignment: 3
-    m_AlignByGeometry: 1
+    m_BestFit: 1
+    m_MinSize: 20
+    m_MaxSize: 62
+    m_Alignment: 2
+    m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
+    m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
---- !u!114 &1675911229058963686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5217234019258806517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 2
-  m_VerticalFit: 0
 --- !u!1 &6064706067432457205
 GameObject:
   m_ObjectHideFlags: 0
