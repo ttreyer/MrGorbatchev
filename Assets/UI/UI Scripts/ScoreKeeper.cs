@@ -35,8 +35,12 @@ public class ScoreKeeper : MonoBehaviour
     //ForTesting
         //AddToScore(1);
 
-        if(ScoreGreaterThan2mil()) return;
-        else if (ScoreGreaterThan1mil()) return;
+        if (myPhaseTracker.currentPhase ==1)
+            {if (Phase2Activate()) return;}
+        else if(myPhaseTracker.currentPhase ==2)
+            {if (Phase3Activate()) return;}
+        else if(myPhaseTracker.currentPhase ==3)
+            {if(Phase4Activate()) return;}
     }
 
     //update the score and score display durring gameplay
@@ -53,12 +57,12 @@ public class ScoreKeeper : MonoBehaviour
     }
 
 
-    private bool ScoreGreaterThan1mil()
+    private bool Phase2Activate()
     {
-        if (score >= 1000000)
+        if (score >= 1000000)  //score greater than 1 million
         {
             //update the phase
-            myPhaseTracker.currentPhase = 1;
+            myPhaseTracker.currentPhase = 2;
             return true;
         }
         else
@@ -67,12 +71,26 @@ public class ScoreKeeper : MonoBehaviour
         }
     }
 
-    private bool ScoreGreaterThan2mil()
+    private bool Phase3Activate()
     {
-        if (score >= 2000000)
+        if (score >= 2000000) //score greater than 2 million
         {
             //update the phase
-            myPhaseTracker.currentPhase = 2;
+            myPhaseTracker.currentPhase = 3;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private bool Phase4Activate()
+    {
+        if (score >= 5000000)  //score greater than 5 million
+        {
+            //update the phase
+            myPhaseTracker.currentPhase = 4;
             return true;
         }
         else
