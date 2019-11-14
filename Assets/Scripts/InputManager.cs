@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class FlipperEvent : UnityEvent<bool> {}
 
 public class InputManager : MonoBehaviour {
-    public FlipperRotator _leftFlipper, _rightFlipper;
+    public FlipperEvent _leftFlippers, _rightFlippers;
     public TetrisSpawner _tetrisSpawner;
     public BallManager _ballManager;
 
@@ -17,7 +21,7 @@ public class InputManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Tab))
             _ballManager.SpawnBall();
 
-        _leftFlipper.FlipToggle(Input.GetKey(KeyCode.LeftArrow));
-        _rightFlipper.FlipToggle(Input.GetKey(KeyCode.RightArrow));
+        _leftFlippers.Invoke(Input.GetKey(KeyCode.LeftArrow));
+        _rightFlippers.Invoke(Input.GetKey(KeyCode.RightArrow));
     }
 }

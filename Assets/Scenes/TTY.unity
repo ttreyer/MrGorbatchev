@@ -960,8 +960,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ec0ff0cfad6c493f90853993867d20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _leftFlipper: {fileID: 708056745}
-  _rightFlipper: {fileID: 170493585}
+  _leftFlippers:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 708056745}
+        m_MethodName: FlipToggle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _rightFlippers:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 170493585}
+        m_MethodName: FlipToggle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _tetrisSpawner: {fileID: 1956838858}
   _ballManager: {fileID: 498144371}
   _ballLaunchForce: 2500
@@ -1359,6 +1385,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1214863527}
     m_Modifications:
+    - target: {fileID: 130329906486606168, guid: 0b24d0060fb86e742b55473de6bf326b,
+        type: 3}
+      propertyPath: m_Name
+      value: HammerPinball
+      objectReference: {fileID: 0}
     - target: {fileID: 4004930993141615435, guid: 0b24d0060fb86e742b55473de6bf326b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1413,11 +1444,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 130329906486606168, guid: 0b24d0060fb86e742b55473de6bf326b,
-        type: 3}
-      propertyPath: m_Name
-      value: HammerPinball
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b24d0060fb86e742b55473de6bf326b, type: 3}
@@ -2829,6 +2855,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6300043881806108754, guid: c6e346ae3bcba498b9e1c35e8b6031d4,
+        type: 3}
+      propertyPath: _ballSpawn
+      value: 
+      objectReference: {fileID: 299162656}
     - target: {fileID: 6300043881806108757, guid: c6e346ae3bcba498b9e1c35e8b6031d4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2884,11 +2915,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6300043881806108754, guid: c6e346ae3bcba498b9e1c35e8b6031d4,
-        type: 3}
-      propertyPath: _ballSpawn
-      value: 
-      objectReference: {fileID: 299162656}
     m_RemovedComponents:
     - {fileID: 257448039, guid: c6e346ae3bcba498b9e1c35e8b6031d4, type: 3}
     - {fileID: 257448038, guid: c6e346ae3bcba498b9e1c35e8b6031d4, type: 3}
