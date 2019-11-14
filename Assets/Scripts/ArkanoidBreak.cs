@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class ArkanoidBreak : MonoBehaviour {
     public float _bounceDamping = 0.9f;
+    public int _scoreIncrease = 100;
+
+    private ScoreKeeper _score;
+
+    private void Awake() {
+        _score = GameObject.FindGameObjectWithTag("ScoreKeeper")
+            .GetComponent<ScoreKeeper>();
+    }
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Player")) {
@@ -21,6 +29,7 @@ public class ArkanoidBreak : MonoBehaviour {
     }
 
     public void Break() {
+        _score.AddToScore(_scoreIncrease);
         Destroy(gameObject);
     }
 }

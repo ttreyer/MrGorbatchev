@@ -33,7 +33,7 @@ public class ScoreKeeper : MonoBehaviour
     void Update()
     { 
     //ForTesting
-        AddToScore(1);
+        //AddToScore(1);
 
         if(ScoreGreaterThan1mil()) return;
         else if (ScoreGreaterThan100thou()) return;

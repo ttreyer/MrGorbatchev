@@ -1191,6 +1191,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1385001112989791209, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: m_TagString
+      value: ScoreKeeper
+      objectReference: {fileID: 0}
     - target: {fileID: 6221659717837598333, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
         type: 3}
       propertyPath: m_LocalPosition.x
