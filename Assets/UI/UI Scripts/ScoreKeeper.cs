@@ -5,12 +5,24 @@ using UnityEngine.UI;
 
 public class ScoreKeeper : MonoBehaviour
 {
-
+    public ScoreKeeper instance;
     [SerializeField] private Text scoreText;
     [SerializeField] private int score;
 
     private NewsReel newsReel;
 
+    private void Awake()
+    {
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -43,9 +55,11 @@ public class ScoreKeeper : MonoBehaviour
 
     private bool ScoreGreaterThan1mil()
     {
-        if (score >= 1000000f)
+        if (score >= 1000000)
         {
             newsReel.UpdateNews("Over 1 million! WOW!", false, 0);
+            //does other stuff
+
             return true;
         }
         else
@@ -56,7 +70,7 @@ public class ScoreKeeper : MonoBehaviour
 
     private bool ScoreGreaterThan100thou()
     {
-        if (score >= 100000f)
+        if (score >= 100000)
         {
             newsReel.UpdateNews("You are pretty good at this.", true, 0);
             return true;
