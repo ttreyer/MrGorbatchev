@@ -15,7 +15,7 @@ public class NewsReel : MonoBehaviour
 
     private int fieldLimit = 12; //number of characters that fit in the stationary headline
     RectTransform textRextTransform;
-    private float charLengthInPx = 43f;
+    private float charLengthInPx = 20f;
     private float startPos = 660f;
     private Vector2 textStartPosition;
     private float totalAdvanced = 0f;
@@ -90,18 +90,29 @@ public class NewsReel : MonoBehaviour
         float advanceBy = 5f;
         float textLength = TextLength();
 
+        Debug.Log ("text length " +textLength);
+
+        ///resets the text trasform before starting loop
         textRextTransform.anchoredPosition = textStartPosition;
+        
+        Debug.Log ("Resetting the text to the start");
 
         while (totalAdvanced <= (textLength+startPos))
         {
             yield return new WaitForSecondsRealtime(.1f);
             
-            textRextTransform.anchoredPosition = new Vector3 (textStartPosition.x -totalAdvanced,
+            textRextTransform.anchoredPosition = new Vector3 (textStartPosition.x -advanceBy,
                                                                 textStartPosition.y
                                                                 );
             totalAdvanced += advanceBy;
-        }
+            
+        Debug.Log ("Total Advanced " +totalAdvanced);
 
+        }
+        //resets the text trasform after ending loop
+        textRextTransform.anchoredPosition = new Vector3(textStartPosition.x + (totalAdvanced-1),
+                                                                textStartPosition.y
+                                                                );
         totalAdvanced = 0;
         yield break;
     }
