@@ -6,10 +6,16 @@ using UnityEngine.UI;
 public class NewsReel : MonoBehaviour
 {
     public string[] headlines;
+    public string[] newsArticle;
+    public string[] quotes;
+    [SerializeField] private Text headlineText;
     [SerializeField] private Text newsText;
-    [SerializeField] private string news;
+    [SerializeField] private Text quoteText;
+    [SerializeField] private string currentHeadline;
+
+    private int fieldLimit = 12; //number of characters that fit in the stationary headline
     RectTransform textRextTransform;
-    private float charLengthInPx = 43f;
+    private float charLengthInPx = 20f;
     private float startPos = 660f;
     private Vector2 textStartPosition;
     private float totalAdvanced = 0f;
@@ -19,10 +25,11 @@ public class NewsReel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textRextTransform = newsText.GetComponent<RectTransform>();
-        news = null;
+        textRextTransform = headlineText.GetComponent<RectTransform>();
+        currentHeadline = null;
 
-        UpdateNews("Hello World.", true,0);
+        //for testing
+        UpdateNewsContents(1);
     }
 
     // Update is called once per frame
@@ -37,35 +44,26 @@ public class NewsReel : MonoBehaviour
         }
     }
 
-    //update the score and score display durring gameplay
-    public void UpdateNews(string newHeadline, bool scroll, int musicIndex)
+    public void UpdateNewsContents(int phase)
     {
-        scrollright = scroll;
-        news = newHeadline;
-        newsText.text = news;
-
-        if(scroll)
-        {
-            textStartPosition = new Vector2(textRextTransform.anchoredPosition.x, 0f);
-        }
-        else
-        {
-            textStartPosition = new Vector2(84.67f, 0f);
-        }
-
-        MusicManager.instance.PlayMusic(musicIndex);
-        textRextTransform.anchoredPosition = textStartPosition;
+        //Update headline and scroll if long enough
+        UpdateHeadline(phase-1);
+        //Update news
+        UpdateNews(phase-1);
+        //update quote and scroll if long enough
+        UpdateQuote(phase-1);
     }
+    
 
-    public void UpdateNews(int headlineIndex, bool scroll, int musicIndex)
+    private void UpdateHeadline(int headlineIndex)
     {
-        scrollright = scroll;
-        news = headlines[headlineIndex];
-        newsText.text = news;
+        currentHeadline = headlines[headlineIndex];
+        headlineText.text = currentHeadline;
+        scrollright = (currentHeadline.Length > fieldLimit);
 
-        if (scroll)
+        if (scrollright)
         {
-            textStartPosition = new Vector2(textRextTransform.anchoredPosition.x, 0f);
+            textStartPosition = textRextTransform.anchoredPosition;
 
         }
         else
@@ -73,7 +71,17 @@ public class NewsReel : MonoBehaviour
             textRextTransform.anchoredPosition = new Vector2(0f, 0f);
         }
 
-        MusicManager.instance.PlayMusic(musicIndex);
+    }
+
+    private void UpdateNews(int newsIndex)
+    {
+        newsText.text = newsArticle[newsIndex];
+    }
+
+    
+    private void UpdateQuote(int quoteIndex)
+    {
+        quoteText.text = quotes[quoteIndex];
     }
 
     private IEnumerator ScrollFromRight()
@@ -82,25 +90,36 @@ public class NewsReel : MonoBehaviour
         float advanceBy = 5f;
         float textLength = TextLength();
 
+        Debug.Log ("text length " +textLength);
+
+        ///resets the text trasform before starting loop
         textRextTransform.anchoredPosition = textStartPosition;
+        
+        Debug.Log ("Resetting the text to the start");
 
         while (totalAdvanced <= (textLength+startPos))
         {
             yield return new WaitForSecondsRealtime(.1f);
             
-            textRextTransform.anchoredPosition = new Vector3 (textStartPosition.x -totalAdvanced,
+            textRextTransform.anchoredPosition = new Vector3 (textStartPosition.x -advanceBy,
                                                                 textStartPosition.y
                                                                 );
             totalAdvanced += advanceBy;
-        }
+            
+        Debug.Log ("Total Advanced " +totalAdvanced);
 
+        }
+        //resets the text trasform after ending loop
+        textRextTransform.anchoredPosition = new Vector3(textStartPosition.x + (totalAdvanced-1),
+                                                                textStartPosition.y
+                                                                );
         totalAdvanced = 0;
         yield break;
     }
 
     private float TextLength()
     {
-        int stringLength = news.Length;
+        int stringLength = currentHeadline.Length;
         float textLengthInPx = stringLength * charLengthInPx;
 
         return textLengthInPx;

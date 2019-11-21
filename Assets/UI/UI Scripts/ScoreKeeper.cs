@@ -5,26 +5,42 @@ using UnityEngine.UI;
 
 public class ScoreKeeper : MonoBehaviour
 {
-
+    public ScoreKeeper instance;
     [SerializeField] private Text scoreText;
     [SerializeField] private int score;
 
-    private NewsReel newsReel;
+    private PhaseTracker myPhaseTracker;
 
+    private void Awake()
+    {
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
-        newsReel = gameObject.GetComponent<NewsReel>();
+        myPhaseTracker = gameObject.GetComponent<PhaseTracker>();
     }
 
     void Update()
     { 
     //ForTesting
-        AddToScore(1);
+        //AddToScore(1);
 
-        if(ScoreGreaterThan1mil()) return;
-        else if (ScoreGreaterThan100thou()) return;
+        if (myPhaseTracker.currentPhase ==1)
+            {if (Phase2Activate()) return;}
+        else if(myPhaseTracker.currentPhase ==2)
+            {if (Phase3Activate()) return;}
+        else if(myPhaseTracker.currentPhase ==3)
+            {if(Phase4Activate()) return;}
     }
 
     //update the score and score display durring gameplay
@@ -41,11 +57,12 @@ public class ScoreKeeper : MonoBehaviour
     }
 
 
-    private bool ScoreGreaterThan1mil()
+    private bool Phase2Activate()
     {
-        if (score >= 1000000f)
+        if (score >= 1000000)  //score greater than 1 million
         {
-            newsReel.UpdateNews("Over 1 million! WOW!", false, 0);
+            //update the phase
+            myPhaseTracker.currentPhase = 2;
             return true;
         }
         else
@@ -54,11 +71,26 @@ public class ScoreKeeper : MonoBehaviour
         }
     }
 
-    private bool ScoreGreaterThan100thou()
+    private bool Phase3Activate()
     {
-        if (score >= 100000f)
+        if (score >= 2000000) //score greater than 2 million
         {
-            newsReel.UpdateNews("You are pretty good at this.", true, 0);
+            //update the phase
+            myPhaseTracker.currentPhase = 3;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    private bool Phase4Activate()
+    {
+        if (score >= 5000000)  //score greater than 5 million
+        {
+            //update the phase
+            myPhaseTracker.currentPhase = 4;
             return true;
         }
         else
