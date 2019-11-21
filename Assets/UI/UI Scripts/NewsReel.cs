@@ -90,12 +90,12 @@ public class NewsReel : MonoBehaviour
         float advanceBy = 5f;
         float textLength = TextLength();
 
-        Debug.Log ("text length " +textLength);
+        //Debug.Log ("text length " +textLength);
 
         ///resets the text trasform before starting loop
         textRextTransform.anchoredPosition = textStartPosition;
         
-        Debug.Log ("Resetting the text to the start");
+        //Debug.Log ("Resetting the text to the start");
 
         while (totalAdvanced <= (textLength+startPos))
         {
@@ -106,7 +106,7 @@ public class NewsReel : MonoBehaviour
                                                                 );
             totalAdvanced += advanceBy;
             
-        Debug.Log ("Total Advanced " +totalAdvanced);
+        //Debug.Log ("Total Advanced " +totalAdvanced);
 
         }
         //resets the text trasform after ending loop
