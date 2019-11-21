@@ -2,13 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CollisionBehavior {
+    Destroy, Stop,
+}
+
 public class TetrisFall : MonoBehaviour {
     public float _fallInterval = 1f;
     public Vector3 _fallSpeed = new Vector3(0f, -1f, 0f);
+    public CollisionBehavior _collisionBehavior = CollisionBehavior.Destroy;
 
     private Rigidbody _rbody;
     private float _fallTime;
     private bool _mustFreeze;
+
+    private MatrixSpawner _spawner;
+
+    public void SetSpawner(MatrixSpawner spawner) {
+        _spawner = spawner;
+    }
 
     private void NewFallTime() {
         _fallTime = Time.time + _fallInterval;
@@ -27,7 +38,10 @@ public class TetrisFall : MonoBehaviour {
     }
 
     private void Freeze() {
-        enabled = false;
+        if (_collisionBehavior == CollisionBehavior.Stop)
+            enabled = false;
+        else
+            Destroy(gameObject);
     }
 
     private void Awake() {
@@ -57,5 +71,10 @@ public class TetrisFall : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("TetrisStop"))
             _mustFreeze = true;
+    }
+
+    private void OnDestroy() {
+        if (_spawner)
+            _spawner.TetrominoDestroyed(gameObject);
     }
 }

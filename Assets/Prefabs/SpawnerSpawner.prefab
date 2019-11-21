@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _matrixSpawners:
-  - {fileID: 4485092029626391936, guid: 2d823456fb07949a3a6cc155bbaf16d0, type: 3}
+  - {fileID: 1827213206961668331, guid: 754147ecbf777452387bd048d0759578, type: 3}
+  - {fileID: 8728257637720141456, guid: 277bc920a96584b02be961b6db7e0b95, type: 3}
+  - {fileID: 8987854067965474784, guid: 678ca23ac304d4253b5f721ccd6b3ffb, type: 3}

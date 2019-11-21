@@ -49,6 +49,7 @@ public class MatrixSpawner : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (Time.time > _spawnTime) {
+            Print();
             if (_tetrominos.Count == 0)
                 SpawnSpawner();
             else
@@ -73,6 +74,7 @@ public class MatrixSpawner : MonoBehaviour {
 
         T.transform.parent = null;
         T.SetActive(true);
+        T.GetComponent<TetrisFall>().SetSpawner(this);
         _tetrominos[0].Remove(T);
 
         _spawnTime += _spawnRate;
@@ -82,9 +84,13 @@ public class MatrixSpawner : MonoBehaviour {
     }
 
     private void Print() {
-        Debug.Log("-------");
+        Debug.Log("--- " + _tetrominosInSpawner.Count);
         for (int i = 0; i < _tetrominos.Count; ++i)
             Debug.Log("Row " + i + ": " + _tetrominos[i].Count + " pieces remaining");
+    }
+
+    public void TetrominoDestroyed(GameObject tetromino) {
+        _tetrominosInSpawner.Remove(tetromino);
     }
 
     private void OnTriggerEnter(Collider other) {
