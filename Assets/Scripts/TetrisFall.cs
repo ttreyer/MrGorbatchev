@@ -68,6 +68,10 @@ public class TetrisFall : MonoBehaviour {
         _mustFreeze = true;
     }
 
+    private void OnCollisionExit(Collision collision) {
+        _mustFreeze = false;
+    }
+
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("TetrisStop"))
             _mustFreeze = true;
