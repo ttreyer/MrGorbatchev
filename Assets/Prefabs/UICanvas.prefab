@@ -208,23 +208,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   headlines:
-  - '"The Wall will be standing in 50 and even in 100 years" - Erich Honecker, January
-    19th, 1989'
-  - 
-  - 
-  - 
+  - "\u201CRed Troops Seal Off E. Berlin from West\u201D \u2014 Sunday, Aug. 13, 1961;
+    The Boston Globe (Boston, MA)"
+  - "\u201CReds Raise Berlin Wall: The grandmas know they may never hold the child.
+    Between them is the wall\u201D \u2014 Saturday, Aug. 19, 1961; The Windsor Star
+    (Windsor, Ontario, Canada)"
+  - "\u201CProtest in West Berlin against the Berlin Wall brings thousands\u201D \u2014
+    Sun., Aug. 10, 1986; The Tennessean (Nashville, TN)"
+  - "\u201CBerliners rejoice as Wall opens while guards worry about losing jobs\u201D
+    \u2014 Fri., Nov. 10, 1989; The Gazette (Montreal, Quebec, Canada)"
   newsArticle:
-  - '"The Wall will be standing in 50 and even in 100 years" - Erich Honecker, January
-    19th, 1989'
-  - 
-  - 
-  - 
+  - "\u201CRed Troops Seal Off E. Berlin from West\u201D \u2014 Sunday, Aug. 13, 1961;
+    The Boston Globe (Boston,\u201CRed Troops Seal Off E. Berlin from West\u201D \u2014
+    Sunday, Aug. 13, 1961; The Boston Globe (Boston, MA)"
+  - "\u201CReds Raise Berlin Wall: The grandmas know they may never hold the child.
+    Between them is the wall\u201D \u2014 Saturday, Aug. 19, 1961; The Windsor Star
+    (Windsor, Ontario, Canada)"
+  - "\u201CProtest in West Berlin against the Berlin Wall brings thousands\u201D \u2014
+    Sun., Aug. 10, 1986; The Tennessean (Nashville, TN)"
+  - "\u201CBerliners rejoice as Wall opens while guards worry about losing jobs\u201D
+    \u2014 Fri., Nov. 10, 1989; The Gazette (Montreal, Quebec, Canada)"
   quotes:
-  - '"The Wall will be standing in 50 and even in 100 years" - Erich Honecker, January
-    19th, 1989'
-  - 
-  - 
-  - 
+  - ' "Nobody has the intention of building a wall." - GDR head of state Walter Ulbricht,
+    East Berlin, June 15th 1961'
+  - '"The Wall will be standing in 50 and even in 100 years" - GDR head of state Erich
+    Honecker, East Berlin, January 19th 1989'
+  - "\u201CMr. Gorbachev, tear down this wall!\u201D -US President Ronald Reagan,
+    June 12th 1987"
+  - "\"The Wall was not brought down by Washington, Bonn or Moscow. It was razed to
+    the ground by the courageous and intrepid people, from both the East and the West.\"
+    - Former German Chancellor Gerhard Schr\xF6der, Berlin, November 9th 1999"
   headlineText: {fileID: 4405205356525779445}
   newsText: {fileID: 662231395979915217}
   quoteText: {fileID: 7295006921377243470}
@@ -447,10 +460,10 @@ RectTransform:
   m_Father: {fileID: 8994016238339749824}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 71.03003, y: 82.85004}
-  m_SizeDelta: {x: -177.5, y: 448.09998}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -247.46997, y: 82.85004}
+  m_SizeDelta: {x: 459.5, y: -631.9}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1621243951891110622
 CanvasRenderer:
@@ -686,10 +699,10 @@ RectTransform:
   m_Father: {fileID: 2709383307094839063}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -71.8, y: -581.6}
-  m_SizeDelta: {x: -179, y: 831.1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 247.7, y: -41.599976}
+  m_SizeDelta: {x: 460, y: -248.90002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3474805128980613936
 CanvasRenderer:
