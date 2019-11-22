@@ -96,7 +96,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 10
+  m_Constraints: 0
   m_CollisionDetection: 2
 --- !u!59 &4609258359698744112
 HingeJoint:
@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 1724671558247532418}
   - component: {fileID: 3406469628993658476}
   m_Layer: 10
-  m_Name: BonusFlip
+  m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -188,5 +188,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.64461684, y: 3.3969734, z: 0.846293}
-  m_Center: {x: 0.070167825, y: 1.004165, z: -0.6730151}
+  m_Size: {x: 0.64461684, y: 3.3368778, z: 0.846293}
+  m_Center: {x: 0.07189783, y: 0.97381514, z: -0.6730151}
