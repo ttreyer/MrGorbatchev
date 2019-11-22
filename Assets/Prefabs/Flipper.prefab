@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4609258359698744123}
   - component: {fileID: 4609258359698744127}
   - component: {fileID: 4609258359698744126}
-  - component: {fileID: 90639002077732321}
   - component: {fileID: 4609258359698744124}
   - component: {fileID: 4609258359698744112}
   - component: {fileID: 4609258359698744113}
@@ -83,20 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &90639002077732321
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4609258359698744122}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4068373912626513877, guid: 04cafa8417ddcd441948c413e52b4aa4, type: 3}
 --- !u!54 &4609258359698744124
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -111,7 +96,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 10
   m_CollisionDetection: 2
 --- !u!59 &4609258359698744112
 HingeJoint:
@@ -124,7 +109,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -2.8784347, y: 0, z: -9.186}
+  m_ConnectedAnchor: {x: 2.249, y: -7.9310007, z: 21.650002}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -133,8 +118,8 @@ HingeJoint:
   m_UseMotor: 1
   m_Motor:
     targetVelocity: 1000
-    force: 4000
-    freeSpin: 0
+    force: 10000
+    freeSpin: 1
   m_UseLimits: 1
   m_Limits:
     min: -60
@@ -160,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d3ca35bd3a4e48f198c09e062ff8c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _flipSpeed: 1000
+  _flipSpeed: 900
 --- !u!1 &6075890841475717046
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,13 +170,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6075890841475717046}
-  m_LocalRotation: {x: 0, y: 0, z: -0.032282885, w: 0.99947876}
+  m_LocalRotation: {x: 0, y: 0, z: 0.043619405, w: 0.9990483}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.0033333334, z: 0.01}
   m_Children: []
   m_Father: {fileID: 4609258359698744123}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.7}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5}
 --- !u!65 &3406469628993658476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -203,5 +188,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.46482393, y: 0.9880192, z: 0.84629303}
-  m_Center: {x: -0.07500468, y: 2.2893307, z: -0.67299193}
+  m_Size: {x: 0.64461684, y: 3.3969734, z: 0.846293}
+  m_Center: {x: 0.070167825, y: 1.004165, z: -0.6730151}
