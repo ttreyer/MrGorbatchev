@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9106156911791792328}
   - component: {fileID: 7294602283900367875}
   - component: {fileID: 2555186671285938236}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShroomBumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
