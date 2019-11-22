@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5780403805654197767}
   - component: {fileID: 3270484270197152817}
   - component: {fileID: 9106156911791792328}
+  - component: {fileID: 7294602283900367875}
+  - component: {fileID: 2555186671285938236}
   m_Layer: 0
   m_Name: ShroomBumper
   m_TagString: Untagged
@@ -78,3 +80,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &7294602283900367875
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7377819205112124436}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0.8256064, z: -0.00000011920932}
+--- !u!114 &2555186671285938236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7377819205112124436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958d21cbd51c84f67b9bcaf14e11e3d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bumperForce: 15
+  _scoreIncrease: 25
