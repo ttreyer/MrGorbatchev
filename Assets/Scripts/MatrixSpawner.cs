@@ -49,7 +49,6 @@ public class MatrixSpawner : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         if (Time.time > _spawnTime) {
-            Print();
             if (_tetrominos.Count == 0)
                 SpawnSpawner();
             else
