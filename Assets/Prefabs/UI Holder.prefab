@@ -151,18 +151,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7791774287699611737, guid: 70b0429ba04a345e692d5d1125a8e038,
         type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7791774287699611737, guid: 70b0429ba04a345e692d5d1125a8e038,
-        type: 3}
       propertyPath: m_Color.r
       value: 0.797
       objectReference: {fileID: 0}
     - target: {fileID: 7791774287699611737, guid: 70b0429ba04a345e692d5d1125a8e038,
         type: 3}
-      propertyPath: m_Color.g
-      value: 0
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70b0429ba04a345e692d5d1125a8e038, type: 3}
@@ -191,11 +186,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5397607781344423542}
     m_Modifications:
-    - target: {fileID: -7581686213101937572, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
-        type: 3}
-      propertyPath: bGUIcolorTint
-      value: 
-      objectReference: {fileID: 3295162722023765293}
     - target: {fileID: 1385001112989791209, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
         type: 3}
       propertyPath: m_Name
@@ -304,6 +294,93 @@ PrefabInstance:
     - target: {fileID: 6221659717837598333, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7581686213101937572, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: bGUIcolorTint
+      value: 
+      objectReference: {fileID: 3295162722023765293}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: headlines.Array.data[0]
+      value: "\u201CRed Troops Seal Off E. Berlin from West\u201D \u2014 Sunday, Aug.
+        13, 1961; The Boston Globe (Boston, MA)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: headlines.Array.data[1]
+      value: "\u201CReds Raise Berlin Wall: The grandmas know they may never hold
+        the child. Between them is the wall\u201D \u2014 Saturday, Aug. 19, 1961;
+        The Windsor Star (Windsor, Ontario, Canada)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: headlines.Array.data[2]
+      value: "\u201CProtest in West Berlin against the Berlin Wall brings thousands\u201D
+        \u2014 Sun., Aug. 10, 1986; The Tennessean (Nashville, TN)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: headlines.Array.data[3]
+      value: "\u201CBerliners rejoice as Wall opens while guards worry about losing
+        jobs\u201D \u2014 Fri., Nov. 10, 1989; The Gazette (Montreal, Quebec, Canada)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: newsArticle.Array.data[0]
+      value: "\u201CRed Troops Seal Off E. Berlin from West\u201D \u2014 Sunday, Aug.
+        13, 1961; The Boston Globe (Boston,\u201CRed Troops Seal Off E. Berlin from
+        West\u201D \u2014 Sunday, Aug. 13, 1961; The Boston Globe (Boston, MA)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: newsArticle.Array.data[1]
+      value: "\u201CReds Raise Berlin Wall: The grandmas know they may never hold
+        the child. Between them is the wall\u201D \u2014 Saturday, Aug. 19, 1961;
+        The Windsor Star (Windsor, Ontario, Canada)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: newsArticle.Array.data[2]
+      value: "\u201CProtest in West Berlin against the Berlin Wall brings thousands\u201D
+        \u2014 Sun., Aug. 10, 1986; The Tennessean (Nashville, TN)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: newsArticle.Array.data[3]
+      value: "\u201CBerliners rejoice as Wall opens while guards worry about losing
+        jobs\u201D \u2014 Fri., Nov. 10, 1989; The Gazette (Montreal, Quebec, Canada)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: quotes.Array.data[0]
+      value: ' "Nobody has the intention of building a wall." - GDR head of state
+        Walter Ulbricht, East Berlin, June 15th 1961'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: quotes.Array.data[1]
+      value: '"The Wall will be standing in 50 and even in 100 years" - GDR head of
+        state Erich Honecker, East Berlin, January 19th 1989'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: quotes.Array.data[2]
+      value: "\u201CMr. Gorbachev, tear down this wall!\u201D -US President Ronald
+        Reagan, June 12th 1987"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1002806563440152528, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: quotes.Array.data[3]
+      value: "\"The Wall was not brought down by Washington, Bonn or Moscow. It was
+        razed to the ground by the courageous and intrepid people, from both the East
+        and the West.\" - Former German Chancellor Gerhard Schr\xF6der, Berlin, November
+        9th 1999"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2801984263551421547, guid: 8c50a01a4ec7549c1b82401cf7d3973f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
