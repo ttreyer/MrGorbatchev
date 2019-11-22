@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class BallLauncher : MonoBehaviour {
     private Rigidbody _rbody;
-    private float _force;
+    private float _speed;
 
     private void Awake() {
         _rbody = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate() {
-        _rbody.AddForce(transform.parent.up * _force);
-        _force = 0f;
+        if (_speed > 0f) {
+            _rbody.velocity = _speed * Vector3.up;
+            _speed = 0f;
+        }
     }
 
-    public void Launch(float force = 2500f) {
-        _force = force;
+    public void Launch(float speed = 2500f) {
+        _speed = speed;
     }
 }
