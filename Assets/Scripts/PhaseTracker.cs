@@ -22,53 +22,46 @@ public class PhaseTracker : MonoBehaviour
     public void ChangePhase(int newPhase) {
         currentPhase = newPhase;
         PlayMusic(newPhase);
+
+        switch (currentPhase) {
+        case 1:
+            Phase1();
+            break;
+        case 2:
+            Phase2();
+            break;
+        case 3:
+            Phase3();
+            break;
+        case 4:
+            Phase4();
+            break;
+        default:
+            Phase1();
+            break;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        switch (currentPhase)
-        {
-            case 1:
-                Phase1();
-                break;
-            case 2:
-                Phase2();
-                break;
-            case 3:
-                Phase3();
-                break;
-            case 4:
-                Phase4();
-                break;
-            default:
-                Phase1();
-                break;
-        }
+    private void Update() {
+        newsReel.UpdateNewsContents(currentPhase);
     }
 
     private void Phase1()
     {
-
         //set background color
         bGUIcolorTint.color = new Color(0f, 0f, 0f, 0.4f); //translucent black
         //alternately, change the image
         // bGUIcolorTint.sprite = /*whateversprite*/;
-
-        //update news
-        newsReel.UpdateNewsContents(currentPhase);
     }
 
     private void Phase2()
     {
         spawner.SetActive(true);
+
         //set background color
         bGUIcolorTint.color = new Color(1f, 0f, 0f, 0.4f); //translucent red
         //alternately, change the image
         // bGUIcolorTint.sprite = /*whateversprite*/;
-
-        //update news
-        newsReel.UpdateNewsContents(currentPhase);
     }
 
 
@@ -79,9 +72,6 @@ public class PhaseTracker : MonoBehaviour
         bGUIcolorTint.color = new Color(.8f,0f,1f,0.4f);  //translucent purple
         //alternately, change the image
         // bGUIcolorTint.sprite = /*whateversprite*/;
-
-        //update news
-        newsReel.UpdateNewsContents(currentPhase);
     }
 
 
@@ -92,9 +82,6 @@ public class PhaseTracker : MonoBehaviour
         bGUIcolorTint.color = new Color(0f, 0f, 1f, 0.4f); //translucent blue
         //alternately, change the image
         // bGUIcolorTint.sprite = /*whateversprite*/;
-
-        //update news
-        newsReel.UpdateNewsContents(currentPhase);
     }
 
     private void PlayMusic(int musicIndex)
