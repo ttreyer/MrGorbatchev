@@ -12,7 +12,7 @@ public class BallSounds : MonoBehaviour {
             return;
 
         int hitIndex = Random.Range(0, _hitSounds.Length);
-        _ballHitSource.pitch = Random.Range(0.8f, 1.5f);
+        _ballHitSource.pitch = Random.Range(0.9f, 1.2f);
         _ballHitSource.PlayOneShot(_hitSounds[hitIndex]);
     }
 }
