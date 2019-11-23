@@ -28,6 +28,7 @@ public class ScoreKeeper : MonoBehaviour
     {
         score = 0;
         myPhaseTracker = gameObject.GetComponent<PhaseTracker>();
+        AddToScore(0);
     }
 
     void Update()
@@ -59,10 +60,10 @@ public class ScoreKeeper : MonoBehaviour
 
     private bool Phase2Activate()
     {
-        if (score >= 1000000)  //score greater than 1 million
+        if (score >= 100)  //score greater than 1 million
         {
             //update the phase
-            myPhaseTracker.currentPhase = 2;
+            myPhaseTracker.ChangePhase(2);
             return true;
         }
         else
@@ -73,10 +74,10 @@ public class ScoreKeeper : MonoBehaviour
 
     private bool Phase3Activate()
     {
-        if (score >= 2000000) //score greater than 2 million
+        if (score >= 3000) //score greater than 2 million
         {
             //update the phase
-            myPhaseTracker.currentPhase = 3;
+            myPhaseTracker.ChangePhase(3);
             return true;
         }
         else
@@ -87,10 +88,10 @@ public class ScoreKeeper : MonoBehaviour
 
     private bool Phase4Activate()
     {
-        if (score >= 5000000)  //score greater than 5 million
+        if (score >= 8000)  //score greater than 5 million
         {
             //update the phase
-            myPhaseTracker.currentPhase = 4;
+            myPhaseTracker.ChangePhase(4);
             return true;
         }
         else
