@@ -48,7 +48,8 @@ public class SceneChanger : MonoBehaviour
 
     public void LoadNextScene()
     {
-        Debug.Log("The next Scene is " + currentSceneIndex++);
-        SceneManager.LoadScene(currentSceneIndex++);
+        int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+        Debug.Log("The next Scene is " + nextScene);
+        SceneManager.LoadScene(nextScene);
     }
 }
