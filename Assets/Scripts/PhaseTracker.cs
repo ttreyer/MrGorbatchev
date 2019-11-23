@@ -97,10 +97,13 @@ public class PhaseTracker : MonoBehaviour
             .DOMove(bonusFlipper.transform.position + objectOffset, 1f)
             .OnComplete(() => {
                 bonusFlipper.autoConfigureConnectedAnchor = true;
-                bonusFlipper.GetComponent<FlipperRotator>().enabled = true;
+                Invoke("ResetFlipper", 0.01f);
             });
     }
 
+    private void ResetFlipper() {
+        bonusFlipper.GetComponent<FlipperRotator>().enabled = true;
+    }
 
     private void Phase4()
     {
