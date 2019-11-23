@@ -65,6 +65,7 @@ public class MusicManager : MonoBehaviour {
 
     public void PlayMusic(int clipIndex) {
         //check if the clip can exist in the array
+        Debug.Log(clipIndex);
         if (clipIndex > musicClips.Length) {
             Debug.Log("Clip " + clipIndex + " does not exist in the musicClips Array.");
             return;
@@ -75,12 +76,13 @@ public class MusicManager : MonoBehaviour {
         else if (musicIsPlaying) { StopTheMusic(); }
 
         //assign and start the new clip
-        MusicStage stage = musicClips[currentClip];
+        MusicStage stage = musicClips[clipIndex];
 
         currentClip = clipIndex;
         myAudioSource.clip = stage._loop;
         myAudioSource.loop = true;
-        myAudioSource.PlayOneShot(stage._intro);
+        if (stage._intro)
+            myAudioSource.PlayOneShot(stage._intro);
         myAudioSource.PlayDelayed(stage._intro.length + stage._offset);
         musicIsPlaying = true;
     }

@@ -142,7 +142,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicClips:
-  - {fileID: 8300000, guid: 77bf3637b06044bd0a02c3b5bd22e97a, type: 3}
+  - _intro: {fileID: 8300000, guid: 126c8fa34c05e43e4a939cc934ba6ee7, type: 3}
+    _loop: {fileID: 0}
+    _offset: 0
+  - _intro: {fileID: 8300000, guid: cf047d5b567c94f01982a3d3b9133b4b, type: 3}
+    _loop: {fileID: 8300000, guid: 126c0888bed7c494ab53a2bf402361f4, type: 3}
+    _offset: -1.7
+  - _intro: {fileID: 8300000, guid: cf047d5b567c94f01982a3d3b9133b4b, type: 3}
+    _loop: {fileID: 8300000, guid: c6615e379f4924a7bac4a1fd8d6f51ca, type: 3}
+    _offset: -1.7
+  - _intro: {fileID: 8300000, guid: cf047d5b567c94f01982a3d3b9133b4b, type: 3}
+    _loop: {fileID: 8300000, guid: dc4bc52e2e3aa40e48f5dedbdd21710b, type: 3}
+    _offset: -1.7
+  - _intro: {fileID: 8300000, guid: cf047d5b567c94f01982a3d3b9133b4b, type: 3}
+    _loop: {fileID: 8300000, guid: 48bce5187e8a54d53bab268cceb3424f, type: 3}
+    _offset: -1.7
   soundEffects:
   - {fileID: 8300000, guid: b0dbd75cf9ef54db7b13b10d9b420ee4, type: 3}
   - {fileID: 8300000, guid: 220afab605bc24b96b482dca4b8a0983, type: 3}

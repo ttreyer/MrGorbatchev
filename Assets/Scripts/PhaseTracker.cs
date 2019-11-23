@@ -15,7 +15,12 @@ public class PhaseTracker : MonoBehaviour
     void Start()
     {
         newsReel = gameObject.GetComponent<NewsReel>();
-        currentPhase = 1;
+        ChangePhase(1);
+    }
+
+    public void ChangePhase(int newPhase) {
+        currentPhase = newPhase;
+        PlayMusic(newPhase);
     }
 
     // Update is called once per frame
@@ -43,8 +48,6 @@ public class PhaseTracker : MonoBehaviour
 
     private void Phase1()
     {
-        //start music
-        PlayMusic(1);
 
         //set background color
         bGUIcolorTint.color = new Color(0f, 0f, 0f, 0.4f); //translucent black
@@ -57,8 +60,6 @@ public class PhaseTracker : MonoBehaviour
 
     private void Phase2()
     {
-        //start music
-        PlayMusic(2);
 
         //set background color
         bGUIcolorTint.color = new Color(1f, 0f, 0f, 0.4f); //translucent red
@@ -72,8 +73,6 @@ public class PhaseTracker : MonoBehaviour
 
     private void Phase3()
     {
-        //start music
-        PlayMusic(3);
 
         //set background color
         bGUIcolorTint.color = new Color(.8f,0f,1f,0.4f);  //translucent purple
@@ -87,8 +86,6 @@ public class PhaseTracker : MonoBehaviour
 
     private void Phase4()
     {
-        //start music
-        PlayMusic(4);
 
         //set background color
         bGUIcolorTint.color = new Color(0f, 0f, 1f, 0.4f); //translucent blue
