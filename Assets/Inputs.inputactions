@@ -66,6 +66,17 @@
                 },
                 {
                     "name": "",
+                    "id": "10bdfcf8-e984-46fa-84de-c5d2f481b520",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftFlipper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5825fdfa-c3cf-4509-a43e-362883db5e57",
                     "path": "<Keyboard>/a",
                     "interactions": "",
@@ -112,6 +123,17 @@
                     "name": "",
                     "id": "9417c8ab-90a8-477b-99c4-baf683d49244",
                     "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightFlipper",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3e38caed-4b24-4166-ac1c-923f17c409f7",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
