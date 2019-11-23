@@ -8,6 +8,7 @@ public class PhaseTracker : MonoBehaviour
     public int currentPhase = 0;
     public Image bGUIcolorTint;
 
+    public GameObject spawner;
 
     private NewsReel newsReel;
 
@@ -60,7 +61,7 @@ public class PhaseTracker : MonoBehaviour
 
     private void Phase2()
     {
-
+        spawner.SetActive(true);
         //set background color
         bGUIcolorTint.color = new Color(1f, 0f, 0f, 0.4f); //translucent red
         //alternately, change the image
