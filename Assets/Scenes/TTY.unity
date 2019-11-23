@@ -1190,21 +1190,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4299165025958315301, guid: e34b3f0db6b9b6a458ab05dada30f6bf,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 36.87915
-      objectReference: {fileID: 0}
-    - target: {fileID: 4299165025958315301, guid: e34b3f0db6b9b6a458ab05dada30f6bf,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 21.50736
-      objectReference: {fileID: 0}
-    - target: {fileID: 1571259309772473322, guid: e34b3f0db6b9b6a458ab05dada30f6bf,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 670450297c7301b45b9e2b8288ad5367, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e34b3f0db6b9b6a458ab05dada30f6bf, type: 3}
 --- !u!1001 &436120749
@@ -1433,6 +1418,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851891402}
   - component: {fileID: 851891401}
+  - component: {fileID: 851891403}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -1447,7 +1433,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851891400}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ec0ff0cfad6c493f90853993867d20a, type: 3}
   m_Name: 
@@ -1497,6 +1483,90 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &851891403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851891400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: fab1a40de8555414e8766ca56abd997c,
+    type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1176772551}
+        m_MethodName: EventFlipToggle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c6de9518-8535-4d21-9ca9-eb9485e57f5d
+    m_ActionName: Gameplay/LeftFlipper[/XboxGamepadMacOS/dpad/left,/XboxGamepadMacOS/buttonWest,/XboxGamepadMacOS/buttonNorth,/Keyboard/a,/Keyboard/leftArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 170493585}
+        m_MethodName: EventFlipToggle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1eb932a6-fbae-4e0b-a854-c9f68301aaa4
+    m_ActionName: Gameplay/RightFlipper[/XboxGamepadMacOS/dpad/right,/XboxGamepadMacOS/buttonEast,/XboxGamepadMacOS/buttonSouth,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 498144371}
+        m_MethodName: Launch
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 2500
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 498144371}
+        m_MethodName: SpawnBall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 137140fc-465e-4eda-b2d5-86fc701413b1
+    m_ActionName: Gameplay/LaunchBall[/XboxGamepadMacOS/rightTrigger,/XboxGamepadMacOS/leftTrigger,/Keyboard/space]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

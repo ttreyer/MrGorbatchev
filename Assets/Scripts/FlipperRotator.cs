@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FlipperRotator : MonoBehaviour {
     public float _flipSpeed = 1000f;
@@ -17,6 +18,10 @@ public class FlipperRotator : MonoBehaviour {
             targetVelocity = _flipTarget,
             force = _joint.motor.force,
         };
+    }
+
+    public void EventFlipToggle(InputAction.CallbackContext ctx) {
+        FlipToggle(ctx.performed);
     }
 
     public void FlipToggle(bool onOff = false) {
