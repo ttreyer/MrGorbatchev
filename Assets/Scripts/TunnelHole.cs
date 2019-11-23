@@ -19,7 +19,7 @@ public class TunnelHole : MonoBehaviour {
         ball.isKinematic = true;
 
         DOTween.Sequence()
-            .Append(ball.DOMove(_fallOffset, 1f).From(true))
+            .Append(ball.DOMove(ball.position + _fallOffset, 1f))
             .Append(ball.DOMove(_exitPosition.position + _fallOffset, 2f))
             .Append(ball.DOMove(_exitPosition.position, 1f).SetEase(Ease.InExpo))
             .AppendCallback(() => BallExit(ball));
