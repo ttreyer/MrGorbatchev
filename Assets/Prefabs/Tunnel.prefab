@@ -247,6 +247,8 @@ MonoBehaviour:
   _exitPosition: {fileID: 0}
   _exitSpeed: 10
   _fallOffset: {x: 0, y: 0, z: 2}
+  _fallTime: 0.5
+  _moveTime: 0.1
 --- !u!65 &4531088641434203728
 BoxCollider:
   m_ObjectHideFlags: 0
