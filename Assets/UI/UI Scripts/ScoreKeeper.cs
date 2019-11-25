@@ -88,7 +88,7 @@ public class ScoreKeeper : MonoBehaviour
 
     private bool Phase4Activate()
     {
-        if (score >= 15000)  //score greater than 5 million
+        if (score >= 1500000)  //score greater than 5 million
         {
             //update the phase
             myPhaseTracker.ChangePhase(4);
